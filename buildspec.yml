@@ -1,0 +1,43 @@
+version: 0.2
+
+proxy:
+  upload-artifacts: yes
+  logs: yes
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+      runtime: version
+    commands:
+      - echo install
+  pre_build:
+    commands:
+      - echo prebuild
+  build:
+    commands:
+      - mvn package
+      - echo build
+  post_build:
+    commands:
+      - echo postbuild
+artifacts:
+  files:
+    - location
+    - location
+  name: artifact-name
+  discard-paths: yes
+  base-directory: location
+  secondary-artifacts:
+    artifactIdentifier:
+      files:
+        - location
+        - location
+      name: secondary-artifact-name
+      discard-paths: yes
+      base-directory: location
+    artifactIdentifier:
+      files:
+        - target\spring-boot-todo-rest-api-h2-0.0.1-SNAPSHOT.jar
+      discard-paths: yes
+      base-directory: location
