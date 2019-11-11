@@ -22,21 +22,4 @@ phases:
       - echo postbuild
 artifacts:
   files:
-    - location
-    - location
-  name: artifact-name
-  discard-paths: yes
-  base-directory: location
-  secondary-artifacts:
-    artifactIdentifier:
-      files:
-        - location
-        - location
-      name: secondary-artifact-name
-      discard-paths: yes
-      base-directory: location
-    artifactIdentifier:
-      files:
-        - target\spring-boot-todo-rest-api-h2-0.0.1-SNAPSHOT.jar
-      discard-paths: yes
-      base-directory: location
+    - target\spring-boot-todo-rest-api-h2-0.0.1-SNAPSHOT.jar
