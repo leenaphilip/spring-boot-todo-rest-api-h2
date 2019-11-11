@@ -8,7 +8,6 @@ phases:
   install:
     runtime-versions:
       java: openjdk8
-      runtime: version
     commands:
       - echo install
   pre_build:
